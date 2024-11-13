@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let key=prompt("Enter key: ");
+        let val=prompt("Enter val: ");
+
+              //1.setItem()
+        localStorage.setItem(key,val);
+console.log(`The key is ${key} and value is ${val}`);
+
+            // 2.getItem()//
+     console.log("getItem: ",localStorage.getItem(key));
+             
+            //3.removeItem()//
+      if(key=="red" || key=="blue"){
+           localStorage.removeItem(key);
+      }
+            //4.clear()//
+      if(key && val ==0){
+         localStorage.clear();
+      }
+           //5.length//
+    console.log("Length is : "+localStorage.length);
+
+          //6.key(index)//
+    console.log("index of key is : "+localStorage.key(0));
+      
+
+
+    </script>
+    </body>
+</html>

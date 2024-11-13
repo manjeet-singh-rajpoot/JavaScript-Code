@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+             <script>
+                class A{
+                    constructor(){
+                        console.log("Constructor overriding...")
+                    }
+                    add(a,b){
+                        let c=a*b;
+                        console.log("Multiplication: "+c);
+                    } 
+                }
+                class B extends A{
+                 constructor(){
+                    super();
+                 }
+
+                   add(a,b){
+                    super.add(9,2)
+                    }
+                show(){
+                    console.log("This is show");
+                }
+              }
+
+                let obj=new B();
+                obj.add(10,30);
+             </script>
+</body>
+</html>

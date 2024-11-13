@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <script>
+        function create() {
+             let x=document.createElement("p");
+             let f=document.createTextNode("New Created...");
+
+             x.appendChild(f);
+
+             document.body.appendChild(x);
+        }
+</script>
+</head>
+                <!-- 1.getElementById() -->
+<body>
+                 
+           <h1 id="gfg">GeeksforGeeks
+            Manjeet
+           </h1>
+
+           <script>
+            let elements=document.getElementById("gfg");
+             elements.style.color="red";
+             
+          </script>
+
+
+                 <!-- 2.getElementsByClassName -->
+
+
+      <div class="first"><h1>Hii raj</h1></div>
+
+      <script>
+                 let t=document.getElementsByClassName("first");
+
+                 t[0].style.color="red";
+                 t[0].style.fontfamily="dark";
+      </script>
+
+               
+                    <!-- 3.getElementsByTagName  -->
+
+      <h1><center> <p>Hii manjeet Singh</p></center></h1>
+
+          <script>
+                     let a=document.getElementsByTagName("p");
+
+                     a[0].style.color="green";
+          </script>
+
+
+                   <!-- 4.queryselector -->
+
+        <div class="ram">
+               <h1>Raj is A Good Boy</h1>
+        </div>
+
+           <script>
+                     let r=document.querySelector(".ram");
+
+                     r.style.color="purple";
+           </script>
+
+          <!-- 5. querySelectorAll -->
+
+          <div class="sam">
+                   <h2>Manjeet is A Good Boy</h2>
+          </div>
+
+          <script>
+                      let s=document.querySelectorAll(".sam");
+
+                      s[0].style.color="red";
+          </script>
+
+            
+                  <!-- 6.Createelemt() -->
+
+    <button onclick="create">
+            CreateparaGraph
+    </button>
+
+                <!-- 7.getElementsByName -->
+
+
+<input type="Search" name="raj" placeholder="Search">
+
+<div class="box" id="id1">Element is 1 
+    
+</div>
+<div class="box" id="id2">Element is 2</div>
+<span id="sp1">Span</span>
+<script src="script2.js"></script>
+
+</body>
+</html>

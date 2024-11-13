@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <script>
+                 const jsdata={key1:"manjeet",
+                               key2:"Singh"
+                              };
+
+                const option1={
+                    method:"POST",
+                    headers:{
+                        'Content-type':'application/json'
+                    },
+                    body:JSON.stringify(jsdata)
+                };
+               let p= fetch("https://jsonplaceholder.typicode.com/todos/1")
+                
+               p.then((val)=>{
+                   if(!val.ok){
+                      throw new Error("Network response was not OK ");
+                   }
+                   return val.json();
+               }).then((val2)=>{
+                     console.log(val2);
+               })
+              .catch((error)=>{
+                         console.log("Fetched Error.."+error);
+               })
+
+
+            myfunc=async ()=>{
+                  let todo={
+                    title:"harry",
+                    body:"manjeet",
+                    userId:"1100",
+                  }
+                  let todor=await jsdata(todo);
+                  console.log("output is: "+todor)
+            }
+
+            myfunc();
+          </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <script>
+                          let [x,y,...restof]=[10,20,30,40,50];
+                           
+                          console.log("x : "+x);
+                          console.log("y: "+y);
+                          console.log("restof : "+restof);
+                </script>
+
+                <script>
+                          let name=[10,20,30,40];
+                          let [a,b,c,...lastname]=name;
+
+                          console.log("a: "+a);
+                          console.log("b : "+b);
+                          console.log("c : "+c);
+                          console.log("rest of " +restof);
+                </script>
+
+                <script>
+                           function namelist(){
+                              return ["alpha","beta","gama"];
+                           }
+
+                           let [first,sec]=namelist();
+
+                           console.log("first name: "+first);
+                           console.log("second name: "+sec);
+                </script>
+
+                <script>
+                         let [pahla,doosra]=[10,20];
+                         [pahla,doosra]=[doosra,pahla];
+
+                         console.log("After swapping: "+pahla+","+doosra);
+                </script>
+
+                <script>
+                ({i,j,...lastname}={i:50,
+                                  j:70,
+                                  n:80,
+                                  m:90});
+
+                        console.log("i : "+i)
+                        console.log("j : "+j)
+                        console.log("restof : "+lastname)
+                </script>
+
+                <script>
+                    //spread operator..//
+                       let arr1=[3,2,4];
+                       let obj1={...arr1};
+
+                       console.log("object of array: "+obj1);
+
+                       function sum(a,b,c){
+                           return a+b+c;
+                       }
+
+                       consol.log("sum is: "+sum(...arr1));
+                </script>
+</body>
+</html>

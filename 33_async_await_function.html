@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+async function show() {
+        let dw = new Promise((resolve, reject) => {
+          setTimeout(() => {
+           // alert("20 Deg...");
+           resolve("27 Deg..")
+          }, 1000);
+        });
+
+        let bw = new Promise((resolve, reject) => {
+          setTimeout(() => {
+           // alert("30 Deg...");
+           resolve("38 Deg..")
+          }, 5000);
+        });
+       // dw.then(alert);
+        //bw.then(alert);
+
+        let delhiw=await dw;
+        console.log("Delhi Weather is : "+delhiw);
+        let bangw=await bw;
+        console.log("Banglore weather is : "+bangw);
+        return [delhiw,bangw];
+      }
+
+      const cherry=async()=>{
+           console.log("My name is manjeet..")
+      }
+
+const main1= async ()=>{
+      console.log("Your Output is : ");
+      //show()
+   //   let a=show();
+      //a.then((val)=>{
+       //   console.log("value is : "+val);
+     // })
+
+     let a=await show();
+     let b=await cherry();
+
+     console.log("a is : "+a);
+     console.log("b is : "+b);
+    }
+
+    main1();
+      /*      //1.Async Function..//
+               async function harry(){
+                   return 5;
+               }
+             */
+      /*
+               harry().then((x)=>{
+                   alert(x);
+               })
+           */
+    </script>
+  </body>
+</html>

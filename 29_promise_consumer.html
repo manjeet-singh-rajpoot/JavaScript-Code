@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                      <!-- resolve -->
+            <script>
+                       let p1=new Promise((resolve,reject)=>{
+                            console.log("promise is pending...");
+
+                        setTimeout(()=>{
+                              alert("i am resolving....");
+                              resolve(true);
+
+                        },1000);
+                       })
+                     //  console.log(p1);
+            p1.then((val)=>{
+                 console.log(val);
+            },(error)=>{
+                console.log(error);
+            });
+
+            </script>
+                      <!-- //reject -->
+            <script>
+                let p2=new Promise((resolve,reject)=>{
+                    console.log("promise is pending...");
+
+                setTimeout(()=>{
+                      alert("i am rejecting....");
+                     reject(new Error("Error is generated..."));
+
+                },1000);
+               })
+              // console.log(p2);
+
+              p2.catch((value)=>{
+                   console.log(value);
+              })
+            </script>
+</body>
+</html>

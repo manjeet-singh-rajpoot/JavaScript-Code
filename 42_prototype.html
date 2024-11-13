@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+                let a={
+                     name:"Manjeet",
+                     address:"Ganj katanga"
+                }
+
+                console.log("Inforamation is: "+a);
+                console.log("Inforamation name is: "+a["name"]);
+                console.log("Inforamation is: "+a["address"]);
+                console.log("name is: "+a.name);
+                console.log("address is: "+a.address);
+
+                let p={
+                     run:()=>{
+                         alert("Execution run.....");
+                     }
+                }
+
+                a.__proto__=p;
+                a.run();
+
+                p.__proto__={
+                   name2:"Shahpura Bhitoni"
+                }
+
+                console.log("name2 is : "+a.name2);
+                console.log("toString: "+a.toString());
+               
+
+                
+            </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+               <script>
+                                   //1.simple inheritance //
+                                   console.log("Simple inheritance:-   ")
+                         class Animal{
+                             run(){
+                                 alert("Animal is running....")
+                                console.log("Animal is running....")
+                             }
+                        
+                             shouting(){
+                                alert("Animal is shouting....")
+                                console.log("Animal is shouting....")
+                             }
+                         }
+
+                         class dog extends Animal{
+                                 barking(){
+                                    alert("Dog is Barking...")
+                                    console.log("Dog is Barking...")
+                                 }
+                         }
+
+
+
+
+                        // let obj1=new Animal();
+                         let obj2=new dog();
+
+                         obj2.run();
+                         obj2.shouting();
+                         obj2.barking();
+
+               </script>
+
+               <script>
+                //2 MultiLevel inheritance//
+                console.log("MultiLevel inheritance:-   ");
+                     class A{
+                        add(){
+                            let a=10;
+                            let b=20;
+                           console.log("Addition: "+a+b);
+                        }
+                     }
+
+                     class B extends A{
+                            sub(){
+                                let c=20;
+                                let d=30;
+                                let g=d-c;
+                                console.log("Substraction: "+g);
+                            }
+                     }
+
+                     class c extends B{
+                           multi(){
+                              let e=30;
+                              let f=2;
+                              console.log("Multiplication: "+e*f);
+                           }
+                     }
+
+                     let obj3=new c();
+                     obj3.add();
+                     obj3.sub();
+                     obj3.multi();
+               </script>
+
+               <script>
+                  //3 heirarhical inheritance//
+                  console.log("heirarhical inheritance:-   ");
+                  class A{
+                     add(){
+                         let a=10;
+                         let b=20;
+                        console.log("Addition: "+a+b);
+                     }
+                  }
+
+                  class B extends A{
+                         sub(){
+                             let c=20;
+                             let d=30;
+                             let g=d-c;
+                             console.log("Substraction: "+g);
+                         }
+                  }
+
+                  class c extends A{
+                        multi(){
+                           let e=30;
+                           let f=2;
+                           console.log("Multiplication: "+e*f);
+                        }
+                  }
+
+                  let obj4=new c();
+                  let obj5=new B();
+                  obj4.add();
+                  obj5.sub();
+                  obj4.multi();
+               </script>
+</body>
+</html>

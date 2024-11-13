@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="first">
+        <button id="btn">click me </button>
+    </div>
+       
+         <script>
+                 let x=function(e){
+                     // alert("Hello World1...");
+                     console.log(e.target);
+                     console.log(e.type);
+                     console.log(e.clientX);
+                     console.log(e.clientY);
+                 }
+                 let y=function(e){
+                    alert("Hello world2....");
+                 }
+             
+           let r=  prompt("Do you want to press any number...");
+
+
+           if(r=="1"){
+            btn.addEventListener("click",x);
+           }
+           else if(r=="2"){
+            btn.removeEventListener("click",y);
+           }else{
+            alert("No");
+           }
+
+         </script>
+</body>
+</html>

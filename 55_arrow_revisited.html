@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+           <script> 
+                     let a={
+                        name:"raj",
+                        city:"Jabalpur",
+                        show:function(){
+                            let that=this;
+                            setTimeout(function(){
+                                console.log(`name  : ${this.name} city: ${this.city}`);
+                            },2000)
+                        }
+                     }
+                     a.show(); 
+            </script>
+           <script>
+            let x=function(){
+               let name="manjeet";
+
+                 let y=function(){
+                     console.log("name is : "+name);
+                 }
+                y();
+            }
+            x();
+           </script>
+</body>
+</html>

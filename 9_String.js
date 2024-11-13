@@ -1,0 +1,12 @@
+let name="manjeet";
+console.log("uppercase: ",name.toUpperCase());
+console.log("length: ",name.length);
+console.log("lowercase: ",name.toLowerCase());
+console.log("replace: ",name.replace("man","raj"));
+console.log("concat: ",name.concat("singh rajpoot"));
+let name2="    manjeet   ";
+console.log("remove whitespace: ",name2.trim());
+console.log("slice : ",name.slice(2,4));
+let fr="naman";
+console.log("fr[0]: ",fr[0]);
+console.log("fr[1]: ",fr[1]);

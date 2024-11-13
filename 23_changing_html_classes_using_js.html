@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              .raj{
+                background-color: yellow;
+                color: white;
+              }
+
+              .text-raj{
+                background-color: black;
+                color: white;
+              }
+              .red{
+                background-color: red;
+                color:white;
+              }
+    </style>
+</head>
+<body>
+         <div id="first" class="raj text-raj red">
+                 My Name is Majeet
+         </div>
+
+         <script>
+                   first.className="text-raj red";
+                  // console.log(first.classList);
+                  // first.classList.remove("red");
+                  //first.classList.add("red");
+                  first.classList.toggle("red");
+         </script>
+</body>
+</html>

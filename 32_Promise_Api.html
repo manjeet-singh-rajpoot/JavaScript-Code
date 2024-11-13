@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <script>
+               let p1=new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                          resolve("value1");
+                    },5000)
+               })
+
+               let p2=new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                          resolve("value2")
+                    },1000);
+               })
+
+               let p3=new Promise((resolve,reject)=>{
+                   setTimeout(()=>{
+                       resolve("value3");
+                   },1000);
+               })
+
+               let p4=new Promise((resolve,reject)=>{
+                       setTimeout(()=>{
+                           reject(new Error("Error is Generated.!..."));
+                       })
+               })
+
+            
+
+                   //1.Promise.all() Method 
+            let p_all=Promise.all([p1,p2,p3]);
+             
+            p_all.then((val)=>{
+                console.log("Values are : ",val);
+            })
+                
+                  //2.Promise.allsettled() //
+           let p_allset=Promise.allSettled([p1,p2,p3,p4]);
+
+           p_allset.then((val)=>{
+              console.log("values are: ",val);
+           })
+            
+          //3.Promise.race()//
+
+             let race=Promise.race([p1,p2,p3]);
+             race.then((val)=>{
+                console.log("values are: ",val);
+             })
+
+        //   4.promise.any()//
+
+        let any=Promise.any([p1,p2,p3,p4]);
+
+          any.then((val)=>{
+               console.log("Values are: ",val);
+          })
+
+           //5.Promise.resolve() //
+       let res=Promise.resolve(7);
+       res.then((val)=>{
+          console.log("Valuees are: ",val);
+       })
+
+             //6.Promise.reject() //
+    let err=Promis.reject(new Error("Hii Error..."));
+    err.then((val)=>{
+        console.log("val: ",val);
+    })
+         </script>
+ </body>
+</html>

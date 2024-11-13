@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+             message="Global";
+            function hello1(){
+               let message="Raj is person"
+               {
+                   let message="After noon";
+                   console.log("Message 1 is : "+message);
+               }
+               let c=function hello2(){
+                  console.log("Hello2 "+message);
+               }
+                return c;
+            }
+
+            c=hello1();
+            c();
+       </script>
+       <script>
+                const x=()=>{
+                    let a=10;
+                    console.log("x: "+a);
+
+                    const y=()=>{
+                        let a=20;
+                        console.log("y: "+a);
+
+                        const z=()=>{
+                            let a=30;
+                            console.log("z: "+a);
+                        }
+                        z();
+                    }
+                    y();
+                }
+                x();
+       </script>
+</body>
+</html>
